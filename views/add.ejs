@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD NEW USER</title>
+</head>
+<body>
+    <div>
+        <form method="POST" action="/user/:add" >
+            <label>NAME: </label>
+            <input type="text" name="name" required>
+            <br>
+            <label>E-MAIL: </label>
+            <input type="email" name="email" required>
+            <br>
+            <label for="">PASSAWORD: </label>
+            <input type="password" name="password" required maxlength="8">
+            <br>
+            <button>ADD</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/users.css">
+    <title>USER DATA</title>
+</head>
+<body>
+    <div class="container">
+        <% users.forEach(user => {%>
+            <div class="user">
+                <h4>ID : <%= user.id %></h4>
+                <h4>Name : <%= user.name %></h4>
+                <h4>EMAIL : <%= user.email %></h4>
+                <form  method="GET" action="/user/<%=user.id%>/edit">
+                    <button>EDIT USERNAME</button>
+                </form>
+                <form  method="GET" action="/user/<%=user.id%>/remove">
+                    <button>DELET USER</button>
+                </form>
+            </div>
+        <%});%>
+    </div>
+</body>
+</html>
